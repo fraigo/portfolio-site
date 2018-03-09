@@ -35,7 +35,8 @@ Vue.component('bjumbo', {
             backgroundImage: imageUrl,
             backgroundSize: 'cover',
             backgroundPosition:'center',
-            textAlign:align
+            textAlign:align,
+            borderRadius: '0px'
         }" >
         <div class="col-md-9 p-0" style="display:inline-block">
         <h1>{{title}}</h1>
