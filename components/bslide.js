@@ -30,7 +30,8 @@ Vue.component('bslide', {
             backgroundImage:'url('+image+')',
             backgroundSize: 'cover',
             backgroundPosition:'center',
-            backgroundColor: bgcolor
+            backgroundColor: bgcolor,
+            marginBottom: '20px'
           }" 
           :class="active==1?'carousel-item active':'carousel-item'" >
             <div class="container" style="background-color:rgba(255,255,255,0.5)">

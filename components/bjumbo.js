@@ -35,13 +35,13 @@ Vue.component('bjumbo', {
             backgroundImage: imageUrl,
             backgroundSize: 'cover',
             backgroundPosition:'center',
-            textAlign:align,
-			marginBottom: '0px',
-			borderRadius: '0px'
+            textAlign:align
         }" >
+        <div class="col-md-9" style="display:inline-block">
         <h1>{{title}}</h1>
         <p class="lead">{{content}}<slot></slot></p>
         <a v-if="link" class="btn btn-lg btn-primary" v-bind:href="link" role="button">{{label}}</a>
+        </div>
     </div>
     `
     
