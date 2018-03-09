@@ -37,7 +37,7 @@ Vue.component('bjumbo', {
             backgroundPosition:'center',
             textAlign:align
         }" >
-        <div class="col-md-9" style="display:inline-block">
+        <div class="col-md-9 p-0" style="display:inline-block">
         <h1>{{title}}</h1>
         <p class="lead">{{content}}<slot></slot></p>
         <a v-if="link" class="btn btn-lg btn-primary" v-bind:href="link" role="button">{{label}}</a>
