@@ -10,9 +10,8 @@ Vue.component('bcard', {
     },
     template: `
 <div class="card" style="width: 18rem;">
-  <img class="card-img-top" :src="image" alt="Card image">
   <div :style="{
-    height: '200px', 
+    height: '140px', 
     backgroundImage:'url('+image+')',
     backgroundSize: 'cover',
     backgroundPosition:'center',

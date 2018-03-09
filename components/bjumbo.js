@@ -35,7 +35,9 @@ Vue.component('bjumbo', {
             backgroundImage: imageUrl,
             backgroundSize: 'cover',
             backgroundPosition:'center',
-            textAlign:align
+            textAlign:align,
+			marginBottom: '0px',
+			borderRadius: '0px'
         }" >
         <h1>{{title}}</h1>
         <p class="lead">{{content}}<slot></slot></p>
