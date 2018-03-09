@@ -41,7 +41,7 @@
 			Feel free to contact me<br> if you have any questions. 
 		</bjumbo>
 		
-        <form method="post">
+        <form method="post" action="mail/?redir=/contact.html#sucess">
 		<div class="row p-2">
 			<div class="col-md-1" ></div>
             <div class="col-md-3" >
@@ -66,7 +66,7 @@
                 Message
             </div>
             <div class="col-md-6" >
-                <textarea name="message" required class="form-control"></textarea>
+                <textarea name="text" required class="form-control"></textarea>
             </div>
 		</div>
         <div class="row p-2">
@@ -90,10 +90,6 @@
 				<div class="phone">
 						<i class="fas fa-phone-square"></i>
 					<content><a href="tel:+16047815923">+1 (604) 781 5923</a></content>
-				</div>
-				<div class="address">
-						<i class="fas fa-map-marker-alt"></i>
-					<content><a href="https://www.google.ca/maps/?q=13367%2089th%20Ave">13367 89th Ave., Surrey, V3V 1A6</a></content>
 				</div>
 				<div class="address">
 						<i class="fab fa-skype"></i>
@@ -121,9 +117,15 @@
 			</div>
 		</div>
 		
-		
+		<div id="msg" class="modal fade" tabindex="-1" role="dialog"  aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content text-center">
+				Your message has been sent!
+				</div>
+			</div>
+		</div>
 	</main>	
-
+	
 </span>
 
 	 <!-- Bootstrap core JavaScript
@@ -143,6 +145,17 @@
 	<script src="components/bprofile.js" type="text/javascript" ></script>
 	<script src="components/bcard.js" type="text/javascript" ></script>
 	<script src="js/app.js" type="text/javascript" ></script>
+	<script>
+		setTimeout(function(){
+
+			console.log("Loaded:"+document.location.toString());
+			if (document.location.hash=="#success"){
+				$("#msg").modal("show");
+			}
+
+		},5000);
+	</script>
+	
 
 </body>
 </html>

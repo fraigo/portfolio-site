@@ -17,3 +17,13 @@ var app = new Vue({
     el: '#app',
     data: data
   })
+
+
+setTimeout(function(){
+
+  console.log("Loaded:"+document.location.toString());
+  if (document.location.hash=="#success"){
+    $("#msg").modal("show");
+  }
+
+},5000);
