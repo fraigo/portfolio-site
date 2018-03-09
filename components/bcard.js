@@ -3,7 +3,11 @@ Vue.component('bcard', {
         title:String,
         label:String,
         image:String,
-        link:String
+        link:String,
+        imagepos:{
+          type:String,
+          default:"center"
+        }
     },
     created:function(){
         this.imageUrl='url('+this.image+')';
@@ -11,22 +15,20 @@ Vue.component('bcard', {
     template: `
 <div>
   <div class="card h-100" >
-    <div :style="{
+    <div v-if="image" :style="{
       height: '140px', 
       backgroundImage:'url('+image+')',
       backgroundSize: 'cover',
-      backgroundPosition:'center',
+      backgroundPosition: imagepos,
     }">
     </div>
-    <div class="card-body">
-      <div class="text-center">
-        <h5 class="card-title">{{title}}</h5>
+    <div class="card-body text-center">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text" ><slot></slot></p>
+      <p v-if="label&&link" style="margin-bottom: 40px;"></p>
+      <div style="position:absolute; bottom:8px;width:100%;">
+        <a v-if="label&&link" :href="link" class="btn btn-primary">{{label}}</a>
       </div>
-      <p class="card-text" style="margin-bottom:30px"><slot></slot></p>
-      <div class="text-center" style="position:absolute; bottom:5px;width:100%;">
-       <a v-if="label&&link" :href="link" class="btn btn-primary">{{label}}</a>
-      </div>
-    </div>
   </div>
 </div>
     `

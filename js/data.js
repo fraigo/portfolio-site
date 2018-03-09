@@ -12,7 +12,7 @@ var data={
         },
         {
             label:"Contact",
-            url:"index.html"
+            url:"contact.html"
         },
     ]
     
