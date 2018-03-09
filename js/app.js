@@ -21,9 +21,11 @@ var app = new Vue({
 
 setTimeout(function(){
 
-  console.log("Loaded:"+document.location.toString());
+  console.log("Loaded:"+document.location.hash);
   if (document.location.hash=="#success"){
+    console.log($("#msg"));
     $("#msg").modal("show");
+    
   }
 
-},5000);
+},1000);
