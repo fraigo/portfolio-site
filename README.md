@@ -1,6 +1,10 @@
 # portfolio-site
 
-Portfolio site demo
+Portfolio site
+
+HTML5/CSS3/Javascript Lab
+
+Author: Francisco Igor
 
 ## Preview
 

@@ -1,6 +1,15 @@
 
+/***
+ * 
+ * Portfolio Site - Main app
+ * Final Lab 
+ * @author Francisco Igor franciscoigor@gmail.com
+ * 
+ */
 
-console.log("Loaded");
+
+
+-->
 
 
 function showPopup(url){
