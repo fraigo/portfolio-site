@@ -9,9 +9,6 @@
 
 
 
--->
-
-
 function showPopup(url){
   windowHeight = Math.min(screen.height,600);
   windowWidth = Math.min(screen.width,800);
